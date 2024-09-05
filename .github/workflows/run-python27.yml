@@ -3,8 +3,8 @@ name: Python application
 on:
   workflow_dispatch:
   push:
-    branches:
-      - main
+    parhs:
+      - "main-soojh-0027.py"
 permissions:
   contents: read
 
