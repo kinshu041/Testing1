@@ -20,7 +20,7 @@ now_utc = datetime.now(pytz.utc)
 indian_timezone=pytz.timezone('Asia/Kolkata')
 
 now_indian = now_utc.astimezone(indian_timezone)
-clientmongo=MongoClient('mongodb+srv://'+os.getenv('Mongo')+'cluster0.ckcyx.mongodb.net/test?retryWrites=true&w=majority')
+clientmongo=MongoClient('mongodb+srv://'+os.getenv('MONGO')+'cluster0.ckcyx.mongodb.net/test?retryWrites=true&w=majority')
 if 0:
   clientmongo["my"]["cute"].find_one_and_update({"ip_address":{"$type":"object"}},{"$set": {"ip_address":{}}})
 ip_address_list=clientmongo["my"]["cute"].find_one({"ip_address":{"$type":"object"}})["ip_address"]
