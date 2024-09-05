@@ -25,6 +25,6 @@ jobs:
           pip install -r requirements.txt
 
         env:
-        	MONGO: ${{ secrets.MONGO}}
+          MONGO: ${{ secrets.MONGO}}
       - name: execute py script # run main.py
         run: python main-soojh-0025.py
