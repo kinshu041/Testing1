@@ -7,7 +7,8 @@ on:
       - "main-soojh-0037.py"
 permissions:
   contents: read
-
+env:
+	Mongo: ${{ secrets.Mongo}}
 jobs:
   build:
     runs-on: ubuntu-latest
